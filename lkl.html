@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+    <h1>Object</h1>
+    <h2>Create</h2>
+    <script>
+        var jayjayworkers = {
+            "programmer" : "jay",
+            "designer" : "hyeob" 
+        };
+        
+        document.write("programmer: "+jayjayworkers.programmer+"<br>");
+        document.write("designer: "+jayjayworkers.designer+"<br>");
+        jayjayworkers.cuter = "yy";
+        document.write("cuter: "+jayjayworkers.cuter+"<br>")
+        jayjayworkers["happy virus"] = "you";
+        document.write("happy virus: "+jayjayworkers["happy virus"]+"<br>")
+    </script>
+    <h2>Iterate</h2>
+    <script>
+        for(var key in jayjayworkers){
+            document.write(key+": "+jayjayworkers[key]+"<br>");
+        }
+    </script>
+    <h2>Property &  Method</h2>
+    <script>
+        jayjayworkers.showAll = function(){
+            for(var key in this){
+            document.write(key+": "+this[key]+"<br>");
+        }
+        }
+        jayjayworkers.showAll();
+    </script>
+    </body>
+</html>
